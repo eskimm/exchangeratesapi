@@ -250,9 +250,9 @@ async def exchange_rates(request):
 
 
 # api.ExchangeratesAPI.io
-@app.route("/", methods=["GET"], host="ucbapi.monolit.me")
+@app.route("/", methods=["GET"], host="api.exchangeratesapi.io")
 async def index(request):
-    return json({"details": "https://ucbapi.monolit.me"}, escape_forward_slashes=False)
+    return json({"details": "https://api.exchangeratesapi.io"}, escape_forward_slashes=False)
 
 
 # Website
