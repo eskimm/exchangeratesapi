@@ -267,6 +267,7 @@ async def index(request):
 app.static("/static", "./exchangerates/static")
 app.static("/robots.txt", "./exchangerates/static/robots.txt")
 app.static("/favicon.ico", "./exchangerates/static/favicon.ico")
+app.static("/floaderio-eae36556ab7086980dadc3627bc6e64c.txt", "./exchangerates/static/loaderio-eae36556ab7086980dadc3627bc6e64c.txt")
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8000, access_log=False, debug=True)
