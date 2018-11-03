@@ -102,10 +102,10 @@ async def force_naked_domain(request):
         return redirect(request.url.replace("www.", "", 1), status=301)
 
 
-@app.route("/latest", methods=["GET", "HEAD"])
-@app.route("/<date>", methods=["GET", "HEAD"])
-@app.route("/api/latest", methods=["GET", "HEAD"])
-@app.route("/api/<date>", methods=["GET", "HEAD"])
+@app.route("/latest", methods=["GET", "HEAD","OPTIONS"])
+@app.route("/<date>", methods=["GET", "HEAD","OPTIONS"])
+@app.route("/api/latest", methods=["GET", "HEAD","OPTIONS"])
+@app.route("/api/<date>", methods=["GET", "HEAD","OPTIONS"])
 @cors()
 async def exchange_rates(request, date=None):
     if request.method == "HEAD":
@@ -172,8 +172,8 @@ async def exchange_rates(request, date=None):
     )
 
 
-@app.route("/history", methods=["GET", "HEAD"])
-@app.route("/api/history", methods=["GET", "HEAD"])
+@app.route("/history", methods=["GET", "HEAD","OPTIONS"])
+@app.route("/api/history", methods=["GET", "HEAD","OPTIONS"])
 @cors()
 async def exchange_rates(request):
     if request.method == "HEAD":
