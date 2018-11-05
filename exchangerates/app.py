@@ -260,7 +260,7 @@ async def index(request):
 async def index(request):
     if request.method == "HEAD":
         return html("")
-    return await file("./exchangerates/templates/index.html")
+    return await file("./exchangerates/templates/indexTest.html")
 
 
 # Static content
